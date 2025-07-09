@@ -208,6 +208,7 @@ $(document).ready(function(){
 
 	// Handle 'Media' content
 	$('#media').click(function(e) {
+		console.log('Media clicked');
 
 		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
@@ -308,6 +309,7 @@ function activateLink(e) {
 
 // Activates the div
 function activateDiv(divId) {
+	console.log('Activating div:', divId);
 	$(divId).addClass('active');
 	$(divId).show();
 
