@@ -20,7 +20,7 @@ class LanguageManager {
     const languageData = this.config.languages[languageCode];
 
     $("#lan img").attr("src", languageData.flag);
-    $("body").attr("class", languageCode); // Usa la clase en el body para manejar estilos CSS
+    $("body").attr("class", languageCode); // Use the class in the body to handle CSS styles
 
     this.updateLanguage();
   }
