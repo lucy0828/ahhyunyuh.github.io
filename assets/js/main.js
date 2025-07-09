@@ -8,6 +8,7 @@ $(document).ready(function(){
 	$('#conferencesContent').hide();
 	$('#projectsContent').hide();
 	$('#cvContent').hide();
+	$('#collaboratorsContent').hide();
 	$('#blogContent').hide();
 	$('#academicContent').hide();
 	$('#particularContent').hide();
@@ -184,6 +185,23 @@ $(document).ready(function(){
 
 			// Show current content
 			activateDiv('#cvContent');
+		}
+	});
+
+	// Handle 'Collaborators' content
+	$('#collaborators').click(function(e) {
+
+		// If the div has already the class active, no need to reload the divs...
+		if(!$(e.target).hasClass('active')) {
+			// Update navbar
+			clearActiveLinks();
+			activateLink(e);
+
+			// Hide other contents
+			clearActiveDivs();
+
+			// Show current content
+			activateDiv('#collaboratorsContent');
 		}
 	});
 
