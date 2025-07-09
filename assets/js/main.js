@@ -259,8 +259,10 @@ $(document).ready(function(){
 
 	// Kudos button functionality
 	$('#kudosBtn').click(function() {
-		let currentCount = parseInt($('#kudosCount').text());
+		console.log('Kudos button clicked!');
+		let currentCount = parseInt($('#kudosCount').text()) || 0;
 		currentCount++;
+		console.log('New count:', currentCount);
 		$('#kudosCount').text(currentCount);
 		
 		// Store in localStorage to persist across sessions
@@ -274,12 +276,11 @@ $(document).ready(function(){
 	});
 
 	// Load kudos count from localStorage on page load
-	$(document).ready(function() {
-		const savedCount = localStorage.getItem('kudosCount');
-		if (savedCount) {
-			$('#kudosCount').text(savedCount);
-		}
-	});
+	const savedCount = localStorage.getItem('kudosCount');
+	if (savedCount) {
+		$('#kudosCount').text(savedCount);
+		console.log('Loaded saved count:', savedCount);
+	}
 });
 
 // Clears the active links
