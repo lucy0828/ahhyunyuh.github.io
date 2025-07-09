@@ -12,8 +12,7 @@ $(document).ready(function(){
 	$('#particularContent').hide();
 	// $('#photosContent').hide();
 
-	// Options menu is hidden by default
-	$('#lan').hide();
+
 
 	// Handle 'About Me' content
 	$('#aboutme').click(function(e) {
@@ -215,18 +214,6 @@ $(document).ready(function(){
 	// Handle the rest of the content
 	// Omit this part if you don't have more content
 	// *************************** //
-
-	// Controls the option menu toggler to show/hide the language selector
-	$('#options-toggler').click(function(e) {
-		if(!$(e.currentTarget).hasClass('active')) {
-			$(e.currentTarget).addClass('active');
-			$('#lan').show("fast");
-		}
-		else {
-			$(e.currentTarget).removeClass('active');
-			$('#lan').hide("fast");
-		}
-	})
 
 	
 	// Create the language manager
