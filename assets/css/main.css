@@ -210,10 +210,8 @@ li > .active {
 
 /* RESPONSIVE HOBBY IMAGES */
 .hobby-img {
-	width: 100%;
-	height: auto;
-	max-width: 120px;
-	min-width: 80px;
+	width: 120px;
+	height: 120px;
 	object-fit: cover;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -222,37 +220,4 @@ li > .active {
 .hobby-img:hover {
 	transform: scale(1.1);
 	box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-/* Responsive breakpoints for hobby images */
-@media (max-width: 575.98px) {
-	/* Extra small devices (phones) */
-	.hobby-img {
-		max-width: 100px;
-		min-width: 70px;
-	}
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-	/* Small devices (landscape phones) */
-	.hobby-img {
-		max-width: 110px;
-		min-width: 80px;
-	}
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-	/* Medium devices (tablets) */
-	.hobby-img {
-		max-width: 120px;
-		min-width: 90px;
-	}
-}
-
-@media (min-width: 992px) {
-	/* Large devices (desktops) */
-	.hobby-img {
-		max-width: 130px;
-		min-width: 100px;
-	}
 }
