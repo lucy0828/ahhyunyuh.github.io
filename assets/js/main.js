@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	console.log('Main.js loaded successfully');
 	// By default, all the divs are hidden, if you were to add a new div, you should hide it here.
 	// If you want to show a div, you should clic on the corresponding link on the navbar.
 	$('#educationContent').hide();
@@ -17,6 +18,7 @@ $(document).ready(function(){
 
 	// Handle 'About Me' content
 	$('#aboutme').click(function(e) {
+		console.log('About Me clicked');
 
 		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
