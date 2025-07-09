@@ -256,6 +256,30 @@ $(document).ready(function(){
         const newLang = langManager.getNextLanguage();
         langManager.setLanguage(newLang);
     });
+
+	// Kudos button functionality
+	$('#kudosBtn').click(function() {
+		let currentCount = parseInt($('#kudosCount').text());
+		currentCount++;
+		$('#kudosCount').text(currentCount);
+		
+		// Store in localStorage to persist across sessions
+		localStorage.setItem('kudosCount', currentCount);
+		
+		// Add animation effect
+		$(this).addClass('btn-primary').removeClass('btn-outline-primary');
+		setTimeout(() => {
+			$(this).removeClass('btn-primary').addClass('btn-outline-primary');
+		}, 200);
+	});
+
+	// Load kudos count from localStorage on page load
+	$(document).ready(function() {
+		const savedCount = localStorage.getItem('kudosCount');
+		if (savedCount) {
+			$('#kudosCount').text(savedCount);
+		}
+	});
 });
 
 // Clears the active links
