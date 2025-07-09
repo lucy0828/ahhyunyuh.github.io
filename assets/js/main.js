@@ -19,21 +19,15 @@ $(document).ready(function(){
 
 	// Handle 'About Me' content
 	$('#aboutme').click(function(e) {
-		console.log('About Me clicked');
+		// Update navbar
+		clearActiveLinks();
+		activateLink(e);
 
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
+		// Hide other contents
+		clearActiveDivs();
 
-			// Hide other contents
-			clearActiveDivs();
-
-			// Show current content
-			activateDiv('#aboutmeContent');
-		}
-
+		// Show current content
+		activateDiv('#aboutmeContent');
 	});
 
 	// Handle 'Education' content
@@ -157,53 +151,41 @@ $(document).ready(function(){
 
 	// Handle 'Projects' content
 	$('#projects').click(function(e) {
+		// Update navbar
+		clearActiveLinks();
+		activateLink(e);
 
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
+		// Hide other contents
+		clearActiveDivs();
 
-			// Hide other contents
-			clearActiveDivs();
-
-			// Show current content
-			activateDiv('#projectsContent');
-		}
+		// Show current content
+		activateDiv('#projectsContent');
 	});
 
 	// Handle 'CV' content
 	$('#cv').click(function(e) {
+		// Update navbar
+		clearActiveLinks();
+		activateLink(e);
 
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
+		// Hide other contents
+		clearActiveDivs();
 
-			// Hide other contents
-			clearActiveDivs();
-
-			// Show current content
-			activateDiv('#cvContent');
-		}
+		// Show current content
+		activateDiv('#cvContent');
 	});
 
 	// Handle 'Collaborators' content
 	$('#collaborators').click(function(e) {
+		// Update navbar
+		clearActiveLinks();
+		activateLink(e);
 
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
+		// Hide other contents
+		clearActiveDivs();
 
-			// Hide other contents
-			clearActiveDivs();
-
-			// Show current content
-			activateDiv('#collaboratorsContent');
-		}
+		// Show current content
+		activateDiv('#collaboratorsContent');
 	});
 
 	// Handle 'Media' content
